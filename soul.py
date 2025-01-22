@@ -16,7 +16,7 @@ from telebot.types import ReplyKeyboardMarkup, KeyboardButton
 
 loop = asyncio.get_event_loop()
 
-TOKEN = '7886448138:AAF8EuhEE4_dTDAsht69vMkCfX2DTmVZoFQ
+TOKEN = '7886448138:AAF8EuhEE4_dTDAsht69vMkCfX2DTmVZoFQ'
 MONGO_URI = 'mongodb+srv://Bishal:Bishal@bishal.dffybpx.mongodb.net/?retryWrites=true&w=majority&appName=Bishal'
 FORWARD_CHANNEL_ID = -1002381138424
 CHANNEL_ID = -1002381138424
